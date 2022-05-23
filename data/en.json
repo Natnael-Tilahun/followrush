@@ -1,0 +1,17 @@
+{
+  "detailsPage": {
+    "plan_label": "Select your plan",
+    "username_label": "Your Instagram username",
+    "username_placeholder": "Instagram username",
+    "email_label": "Your Email",
+    "email_placeholder": "Email@example.com",
+    "button_label": "Order Now"
+  },
+  "checkoutPage": {
+    "hero_label": "Accept payments with credit card",
+    "plan_label": "Plan selected",
+    "username_label": "Instagram username ",
+    "email_label": "Email address",
+    "total_label": "Total payment"
+  }
+}

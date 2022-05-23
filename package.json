@@ -1,0 +1,28 @@
+{
+  "name": "followers-app-sample",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.7.2",
+    "@stripe/stripe-js": "^1.29.0",
+    "micro": "^9.3.4",
+    "next": "12.1.6",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "react-hook-form": "^7.30.0",
+    "stripe": "^8.222.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  }
+}
