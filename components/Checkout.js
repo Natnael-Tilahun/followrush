@@ -35,7 +35,10 @@ function Checkout() {
   //     });
   // }, []);
 
-  fetch(`https://www.instagram.com/${context.orderDetails.username}/?__a=1`, { "mode": 'no-cors'})
+  fetch(`https://www.instagram.com/${context.orderDetails.username}/?__a=1`, {mode: 'cors',
+  headers: {
+    'Access-Control-Allow-Origin':'*'
+  }})
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
