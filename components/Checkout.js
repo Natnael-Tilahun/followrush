@@ -16,23 +16,32 @@ function Checkout() {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads using our local API
     const linkToPage = `https://www.instagram.com/${context.orderDetails.username}/`;
-    fetch("api/stripe_intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        amount: context.orderDetails.totalPrice * 100,
-        payment_intent_id: "",
-        serviceId: context.orderDetails.planSelected.serviceCode,
-        linkToPage,
-        quantity: context.orderDetails.planSelected.quantity,
-        email: context.orderDetails.email,
-      }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        setClientSecret(data.client_secret), setPaymentIntent(data.id);
-      });
-  }, []);
+  //   fetch("api/stripe_intent", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({
+  //       amount: context.orderDetails.totalPrice * 100,
+  //       payment_intent_id: "",
+  //       serviceId: context.orderDetails.planSelected.serviceCode,
+  //       linkToPage,
+  //       quantity: context.orderDetails.planSelected.quantity,
+  //       email: context.orderDetails.email,
+  //     }),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setClientSecret(data.client_secret), setPaymentIntent(data.id);
+  //       alert(data.id)
+  //     });
+  // }, []);
+
+  fetch("https://www.instagram.com/selam_romantesfaye/?__a=1")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data)
+      alert(data)
+    });
+}, []);
 
   const appearance = {
     theme: "stripe",
