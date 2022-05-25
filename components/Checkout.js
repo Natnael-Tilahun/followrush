@@ -35,7 +35,7 @@ function Checkout() {
   //     });
   // }, []);
 
-  fetch("https://www.instagram.com/selam_romantesfaye/?__a=1")
+  fetch(`https://www.instagram.com/${context.orderDetails.username}/?__a=1`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
