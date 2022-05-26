@@ -46,7 +46,7 @@ function Checkout() {
   };
 
   return (
-    <div className="w-full h-full lg:w-[80%] lg:h-[70%] rounded-md drop-shadow-md grid lg:grid-cols-3">
+    <div className="w-full h-full md:w-[80%] lg:h-[70%] rounded-md drop-shadow-md grid lg:grid-cols-3">
       <div className="m-10 flex h-[90%] lg:h-[80%] flex-col items-center lg:col-span-2 bg-white rounded-md">
         <h1 className="text-2xl bold mb-4 mt-4 text-center">
           {checkoutPage.hero_label}
@@ -60,9 +60,9 @@ function Checkout() {
           </Elements>
         )}
       </div>
-      <div className="m-10 h-[90%] lg:h-[80%] flex flex-col text-center items-center col-span-1 bg-white rounded-md">
+      <div className="m-10 h-[70%] md:h-[80%] flex flex-col text-center items-center col-span-1 bg-white rounded-md">
         <div className="m-6 flex flex-col h-full justify-between ">
-          <div className="space-y-14">
+          <div className="space-y-6">
             <div>
               <p className="font-semibold">{checkoutPage.username_label}</p>
               <p className="text-gray-600">{context.orderDetails.username}</p>
@@ -79,7 +79,7 @@ function Checkout() {
             </div>
           </div>
           <div>
-            <p className="font-semibold">{checkoutPage.total_label}</p>
+            <p className="font-semibold pt-2">{checkoutPage.total_label}</p>
             <p className="text-gray-600">
               {context.orderDetails.totalPrice} {context.orderDetails.currency}
             </p>
