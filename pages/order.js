@@ -87,7 +87,7 @@ function Order() {
   return (
     <div className="w-screen h-screen bg-gray-200 flex justify-center items-center">
       <div className="bg-white p-10 w-96 h-96 rounded-md drop-shadow-md flex flex-col justify-between">
-        <p>{message}</p>
+        <p className="align-middle text-center text-red-600 font-semibold">{message}</p>
         <button
           onClick={() => handelClick()}
           className="bg-[#ffce1e] p-4 w-full mt-6 rounded-md "

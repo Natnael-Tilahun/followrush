@@ -106,7 +106,7 @@ export default function CheckoutForm(paymentIntent) {
         >
           <span id="button-text " className=" ">
             {isLoading ? (
-              <div className="spinner" id="spinner"></div>
+              <div className="spinner" id="spinner">Processing...</div>
             ) : (
               "Pay now"
             )}
