@@ -63,6 +63,7 @@ function OrderDetails() {
               <select
                 {...register("plan")}
                 id="countries"
+                required
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10  p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 {plans.map((plan) => (
@@ -98,6 +99,7 @@ function OrderDetails() {
               <input
                 {...register("username")}
                 type="text"
+                required
                 id="email-address-icon"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder={detailsPage.username_placeholder}
@@ -130,6 +132,7 @@ function OrderDetails() {
                 {...register("email")}
                 type="text"
                 id="email-address-icon"
+                required
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder={detailsPage.email_placeholder}
               />
