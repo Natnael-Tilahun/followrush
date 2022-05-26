@@ -104,13 +104,13 @@ export default function CheckoutForm(paymentIntent) {
           disabled={isLoading || !stripe || !elements}
           id="submit"
         >
-          {/* <span id="button-text " className=" "> */}
+          <span id="button-text " className=" ">
             {isLoading ? (
-              <div className="spinner" id="spinner"></div>
+              <div className="spinner" id="spinner">{message} </div>
             ) : (
               "Pay now"
             )}
-          {/* </span> */}
+          </span>
         </button>
         {/* Show any error or success messages */}
         {message && <div id="payment-message" className="text-red-500">{message}</div>}
