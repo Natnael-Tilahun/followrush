@@ -30,13 +30,13 @@ function OrderDetails() {
   };
 
   return (
-    <div className="bg-white w-96 h-[65%] md:h-[90%]rounded-md drop-shadow-md">
-      <div className="m-10 flex flex-col items-center">
+    <div className="bg-white w-96 h-[65%] md:h-[90%] rounded-md drop-shadow-md">
+      <div className="m-10 md:m-7 flex flex-col items-center">
         <img src="mainlogo.svg" />
-        <div className="border-b border-gray-300 w-full mt-10 mb-5" />
+        <div className="border-b border-gray-300 w-full mt-10 mb-5 md:mt-7" />
         <form
           onSubmit={handleSubmit((data) => onSubmit(data))}
-          className="w-full flex flex-col justify-center items-center space-y-5"
+          className="w-full flex flex-col justify-center items-center space-y-5 md:space-y-3"
         >
           <div className="w-full  flex flex-col justify-center items-center ">
             <label
