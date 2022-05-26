@@ -58,7 +58,7 @@ function Order() {
                 .then((res) => {
                   console.log(res);
                   if (res.status === "failed") {
-                    setMessage(`an Error occurred "${res.error}"`);
+                    setMessage(`An error occurred "${res.error}"`);
                   } else {
                     setMessage(`Payment succeeded! ${JSON.stringify(res)} `);
                   }
