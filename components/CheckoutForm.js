@@ -72,7 +72,7 @@ export default function CheckoutForm(paymentIntent) {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: "http://localhost:3000/order",
+        return_url: "https://followrush.vercel.app/order",
         receipt_email: context.orderDetails.email,
         payment_method_data: {
           billing_details: {
