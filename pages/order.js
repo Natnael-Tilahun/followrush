@@ -58,11 +58,10 @@ function Order() {
                 .then((res) => {
                   console.log(res);
                   if (res.status === "failed") {
-                    setMessage(`An error occurred "\n ${res.error}"`);
+                    setMessage("An error occurred \n" + `${res.error}`);
                   } else {
-                    setMessage(`Payment succeeded! "\n"
-                    Order Number: ${res.order} "\n"
-                    Message: ${res.message}`);
+                    setMessage("Payment succeeded! \n"+
+                    `Order Number: ${res.order}`+ "\n Message: "+`${res.message}`);
                   }
                 });
             } catch (error) {

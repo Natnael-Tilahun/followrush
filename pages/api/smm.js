@@ -33,7 +33,7 @@ const handler = async (req, res) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           key: process.env.SMM_SECRET_KEY,
-          actions: "add",
+          action: "add",
           service: Number(serviceId),
           link: linkToPage,
           quantity,
