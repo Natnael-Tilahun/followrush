@@ -31,7 +31,7 @@ function Checkout() {
       .then((res) => res.json())
       .then((data) => {
         setClientSecret(data.client_secret), setPaymentIntent(data.id);
-        alert(data.id)
+        // alert(data.id)
       });
   }, []);
 
