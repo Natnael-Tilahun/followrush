@@ -30,7 +30,7 @@ function OrderDetails() {
   };
 
   return (
-    <div className="bg-blue w-96 h-[65%] md:h-[80%]rounded-md drop-shadow-md">
+    <div className="bg-white w-96 h-[65%] md:h-[80%]rounded-md drop-shadow-md">
       <div className="m-10 flex flex-col items-center">
         <img src="mainlogo.svg" />
         <div className="border-b border-gray-300 w-full mt-10 mb-5" />
