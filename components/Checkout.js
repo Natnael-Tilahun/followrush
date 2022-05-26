@@ -62,7 +62,7 @@ function Checkout() {
       </div>
       <div className="m-10 h-[90%] lg:h-[80%] flex flex-col text-center items-center col-span-1 bg-white rounded-md">
         <div className="m-6 flex flex-col h-full justify-between ">
-          <div className="space-y-8">
+          <div className="space-y-14">
             <div>
               <p className="font-semibold">{checkoutPage.username_label}</p>
               <p className="text-gray-600">{context.orderDetails.username}</p>
