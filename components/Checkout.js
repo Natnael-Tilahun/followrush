@@ -46,8 +46,8 @@ function Checkout() {
   };
 
   return (
-    <div className="w-full h-full lg:w-[80%] lg:h-[70%] rounded-md drop-shadow-md grid lg:grid-cols-3">
-      <div className="m-10 flex h-[90%] lg:h-[80%] flex-col items-center lg:col-span-2 bg-white rounded-md">
+    <div className="w-full h-full lg:w-[80%] md:h-[80%] rounded-md drop-shadow-md grid lg:grid-cols-3">
+      <div className="m-10 flex h-[90%] md:h-[80%] flex-col items-center lg:col-span-2 bg-white rounded-md">
         <h1 className="text-2xl bold mb-4 mt-4 text-center">
           {checkoutPage.hero_label}
         </h1>
@@ -60,7 +60,7 @@ function Checkout() {
           </Elements>
         )}
       </div>
-      <div className="m-10 h-[90%] lg:h-[80%] flex flex-col text-center items-center col-span-1 bg-white rounded-md">
+      <div className="m-10 h-[90%] md:h-[80%] flex flex-col text-center items-center col-span-1 bg-white rounded-md">
         <div className="m-6 flex flex-col h-full justify-between ">
           <div className="space-y-6">
             <div>
