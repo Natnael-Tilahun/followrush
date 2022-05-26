@@ -36,7 +36,7 @@ function OrderDetails() {
         <div className="border-b border-gray-300 w-full mt-10 mb-5 md:mt-7" />
         <form
           onSubmit={handleSubmit((data) => onSubmit(data))}
-          className="w-full flex flex-col justify-center items-center space-y-5 md:space-y-3"
+          className="w-full flex flex-col justify-center items-center space-y-5 "
         >
           <div className="w-full  flex flex-col justify-center items-center ">
             <label
