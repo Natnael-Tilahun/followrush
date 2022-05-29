@@ -52,12 +52,17 @@ function Checkout() {
           {checkoutPage.hero_label}
         </h1>
         {clientSecret && (
-          <Elements options={options} stripe={stripe}>
+          <iframe
+          src="https://followrush.vercel.app"
+          options={options}
+          stripe={stripe}
+          className="bg-transparent z-50 w-1200px h-635px fixed border-0 "
+        >
             <CheckoutForm
               paymentIntent={paymentIntent}
               clientSecret={clientSecret}
             />
-          </Elements>
+          </iframe>
         )}
       </div>
       <div className="m-10 h-[90%] md:h-[80%] flex flex-col text-center items-center col-span-1 bg-white rounded-md">
