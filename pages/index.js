@@ -11,20 +11,20 @@ export default function Home() {
     register,
     formState: { errors },
   } = useForm();
-  const onSubmit = (values) => {
-    // getting details ready
-    const { plan, username, email } = values;
-    const parsedPlan = JSON.parse(plan);
-    const orderDetails = {
-      planSelected: parsedPlan,
-      email,
-      username, //instagram username
-      totalPrice: parsedPlan.price * (parsedPlan.quantity / 1000),
-      currency: "USD", // hard coded as all of the api prices are in usd
-    };
+  // const onSubmit = (values) => {
+  //   // getting details ready
+  //   const { plan, username, email } = values;
+  //   const parsedPlan = JSON.parse(plan);
+  //   const orderDetails = {
+  //     planSelected: parsedPlan,
+  //     email,
+  //     username, //instagram username
+  //     totalPrice: parsedPlan.price * (parsedPlan.quantity / 1000),
+  //     currency: "USD", // hard coded as all of the api prices are in usd
+  //   };
 
-    context.setOrderDetails(orderDetails);
-  };
+  //   context.setOrderDetails(orderDetails);
+  // };
 
   return (
     <div className="w-screen h-screen bg-gray-200 flex justify-center items-center">
