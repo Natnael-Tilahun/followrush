@@ -6,11 +6,19 @@ import Checkout from "../components/Checkout";
 
 export default function Home() {
   const context = useContext(Context);
+<<<<<<< HEAD
   // const {
   //   handleSubmit,
   //   register,
   //   formState: { errors },
   // } = useForm();
+=======
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+>>>>>>> ed165ac8d1b6472f367b11f2e90cb4853e99bce8
   // const onSubmit = (values) => {
   //   // getting details ready
   //   const { plan, username, email } = values;
