@@ -8,7 +8,7 @@
     "button_label": "Order Now"
   },
   "checkoutPage": {
-    "hero_label": "Accept payments with credit card",
+    "hero_label": "Accept payments with credit card or paypal",
     "plan_label": "Plan selected",
     "username_label": "Instagram username ",
     "email_label": "Email address",

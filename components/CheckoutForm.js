@@ -1,23 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
-import {
-  PaymentElement,
-  useStripe,
-  useElements,
-} from "@stripe/react-stripe-js";
 import { Context } from "../context/context";
+import { PayPalButton } from "react-paypal-button-v2";
 
 export default function CheckoutForm(paymentIntent) {
   const context = useContext(Context);
   const [locAmount, setLocAmount] = useState("300");
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const stripe = useStripe();
-  const elements = useElements();
+ 
 
   useEffect(() => {
-    if (!stripe) {
-      return;
-    }
+  
 
     //Grab the client secret from url params
     const clientSecret = new URLSearchParams(window.location.search).get(
@@ -28,35 +21,7 @@ export default function CheckoutForm(paymentIntent) {
       return;
     }
 
-    stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
-      switch (paymentIntent.status) {
-        case "succeeded":
-          setMessage("Payment succeeded!");
-          break;
-        case "Processing":
-          setMessage("Your payment is processing.");
-          break;
-        case "requires_payment_method":
-          setMessage("Your payment was not successful, please try again.");
-          break;
-        default:
-          setMessage("Something went wrong.");
-          break;
-      }
-    });
-  }, [stripe]);
-
-  const handleAmount = async (val) => {
-    setLocAmount(val);
-    fetch("api/stripe_intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        amount: val * 100,
-        payment_intent_id: paymentIntent.paymentIntent,
-      }),
-    });
-  };
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -98,10 +63,10 @@ export default function CheckoutForm(paymentIntent) {
         onSubmit={handleSubmit}
         className="m-auto w-[80%]"
       >
-        <PaymentElement id="payment-element" />
+        <PayPalButton id="payment-element" />
         <button
           className="elements-style-background mt-10 w-full bg-[#ffce1e] p-4  rounded-md"
-          disabled={isLoading || !stripe || !elements}
+          disabled={isLoading}
           id="submit"
         >
           {/* <span id="button-text " className=" "> */}
